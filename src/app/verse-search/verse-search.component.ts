@@ -15,7 +15,7 @@ export class VerseSearchComponent {
 
   onSearch(): void {
     if (this.searchQuery) {
-      // Send a GET request to your backend API to perform the search
+      // Send a GET request to backend API to perform the search
       this.bibleService.searchVersesByText(this.searchQuery)
         .subscribe((results: BibleVerse[]) => {
           this.searchResults = results; // Update 'searchResults' with the search results

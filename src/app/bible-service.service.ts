@@ -42,10 +42,10 @@ export class BibleServiceService {
     return this.http.delete<void>(`${this.apiBaseUrl}/verses/${id}`);
   }
 
-// Update a Bible verse by ID
-updateVerseById(id: number, verse: BibleVerse): Observable<void> {
-  return this.http.put<void>(`${this.apiBaseUrl}/verses/${id}`, verse);
-}
+  // Update a Bible verse by ID
+  updateVerseById(id: number, verse: BibleVerse): Observable<void> {
+    return this.http.put<void>(`${this.apiBaseUrl}/verses/${id}`, verse);
+  }
 
   // Create a new Bible verse
   createVerse(verse: BibleVerse): Observable<BibleVerse> {

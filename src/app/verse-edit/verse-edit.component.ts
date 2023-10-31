@@ -33,7 +33,7 @@ export class VerseEditComponent {
 
   onSubmit(): void {
     if (this.verseId !== null) {
-      // Send a PUT request to your backend API to update the verse
+      // Send a PUT request to backend API to update the verse
       this.bibleService.updateVerseById(this.verseId, this.editedVerse)
         .subscribe(() => {
           // Handle the response, e.g., show a success message
