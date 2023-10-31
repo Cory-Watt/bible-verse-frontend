@@ -1,0 +1,25 @@
+/* Center the content */
+.text-center {
+  text-align: center;
+}
+
+/* Style buttons */
+button {
+  margin: 10px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Style the Delete button */
+button.delete-button {
+  background-color: #D9534F;
+  color: #fff;
+}
+
+/* Style the Cancel button */
+button.cancel-button {
+  background-color: #6C757D;
+  color: #fff;
+}

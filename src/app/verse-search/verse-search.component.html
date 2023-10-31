@@ -1,0 +1,16 @@
+<h2>Search for Verses</h2>
+<form (ngSubmit)="onSearch()">
+  <label for="searchQuery">Search Query:</label>
+  <input type="text" id="searchQuery" name="searchQuery" [(ngModel)]="searchQuery" required>
+
+  <button type="submit">Search</button>
+</form>
+
+<div *ngIf="searchResults">
+  <h3>Search Results:</h3>
+  <ul>
+    <li *ngFor="let verse of searchResults">
+      {{ verse.book }} {{ verse.chapter }}:{{ verse.verseNumber }} - {{ verse.text }}
+    </li>
+  </ul>
+</div>
