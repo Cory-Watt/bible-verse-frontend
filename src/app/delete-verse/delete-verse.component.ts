@@ -19,7 +19,7 @@ export class DeleteVerseComponent {
     this.route.paramMap.subscribe(params => {
       const verseIdParam = params.get('verseId');
       if (verseIdParam) {
-        this.verseId = parseInt(verseIdParam, 10);
+        this.verseId = parseInt(verseIdParam, 10); // Parse the verseId as an integer
       }
     });
   }
@@ -32,13 +32,13 @@ export class DeleteVerseComponent {
           // Handle the response, e.g., show a success message
           console.log('Verse deleted successfully');
           // Optionally, navigate to another page after deletion
-          this.router.navigate(['/books']);
+          this.router.navigate(['/books']); // Navigate to the '/books' route
         });
     }
   }
 
   onCancel(): void {
     // Handle the cancel action, e.g., navigate back to the previous page
-    this.router.navigate(['/books']);
+    this.router.navigate(['/books']); // Navigate to the '/books' route
   }
 }

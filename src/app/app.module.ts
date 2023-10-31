@@ -4,8 +4,7 @@ import { RouterModule } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 
-
-import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -27,14 +26,14 @@ import { VerseEditComponent } from './verse-edit/verse-edit.component';
     VerseEditComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
-    RouterModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
+    BrowserModule, // Import BrowserModule for browser-based applications
+    AppRoutingModule, // Import application's routing module
+    RouterModule, // Import RouterModule for routing functionality
+    HttpClientModule, // Import HttpClientModule for HTTP requests
+    FormsModule, // Import FormsModule for two-way data binding
+    ReactiveFormsModule, // Import ReactiveFormsModule for reactive forms
   ],
-  providers: [BibleServiceService,],
-  bootstrap: [AppComponent]
+  providers: [BibleServiceService], // Provide your service
+  bootstrap: [AppComponent] // Bootstrap the main application component
 })
 export class AppModule { }

@@ -8,8 +8,8 @@ import { BibleVerse } from '../model/bible-verse.model';
   styleUrls: ['./verse-search.component.css']
 })
 export class VerseSearchComponent {
-  searchQuery: string = '';
-  searchResults: BibleVerse[] = [];
+  searchQuery: string = ''; // Initialize 'searchQuery' as an empty string
+  searchResults: BibleVerse[] = []; // Initialize 'searchResults' as an empty array
 
   constructor(private bibleService: BibleServiceService) {}
 
@@ -18,7 +18,7 @@ export class VerseSearchComponent {
       // Send a GET request to your backend API to perform the search
       this.bibleService.searchVersesByText(this.searchQuery)
         .subscribe((results: BibleVerse[]) => {
-          this.searchResults = results;
+          this.searchResults = results; // Update 'searchResults' with the search results
         });
     }
   }

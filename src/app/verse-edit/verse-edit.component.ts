@@ -9,12 +9,12 @@ import { BibleVerse } from '../model/bible-verse.model';
   styleUrls: ['./verse-edit.component.css']
 })
 export class VerseEditComponent {
-  verseId: number | null = null;
+  verseId: number | null = null; // Initialize 'verseId' as null
   editedVerse: BibleVerse = {
-    book: null,
-    chapter: null,
-    verseNumber: null,
-    text: ''
+    book: null, // Initialize 'book' as null
+    chapter: null, // Initialize 'chapter' as null
+    verseNumber: null, // Initialize 'verseNumber' as null
+    text: '' // Initialize 'text' as an empty string
   };
 
   constructor(
@@ -26,7 +26,7 @@ export class VerseEditComponent {
     this.route.paramMap.subscribe(params => {
       const verseIdParam = params.get('verseId');
       if (verseIdParam) {
-        this.verseId = parseInt(verseIdParam, 10);
+        this.verseId = parseInt(verseIdParam, 10); // Parse 'verseId' as an integer
       }
     });
   }
@@ -39,7 +39,7 @@ export class VerseEditComponent {
           // Handle the response, e.g., show a success message
           console.log('Verse updated successfully');
           // Optionally, navigate to another page after updating
-          this.router.navigate(['/books']);
+          this.router.navigate(['/books']); // Navigate to the '/books' route
         });
     }
   }
